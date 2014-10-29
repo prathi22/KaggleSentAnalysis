@@ -8,7 +8,7 @@ export DATA_RND_PATH=$PATH_KAGGLE_ROOT/data/round04
 export STANFORD_LIB=stanford_classpath3_4
 
 # The best model that I got during the tests was this one:
-export SENTIMENT_MODEL=rntn_flat_20141009_b-0137-80,38.ser.gz
+export SENTIMENT_MODEL=rntn_flat_20141010_a-0123-80,47.ser.gz
 
 if [[ "$2" ]]
 then
@@ -47,7 +47,7 @@ elif [ "$1" -eq 7 ]; then
 
 elif [ "$1" -eq 8 ]; then
     $PATH_KAGGLE_ROOT/stanford_run
-    java -mx12g -cp "$PATH_KAGGLE_ROOT/stanford_classpath3_4/*:$PATH_KAGGLE_ROOT/java_bin/" edu.stanford.nlp.sentiment.SentimentTraining -numHid 25 -batchSize 40 -debugOutputEpochs 1 -maxTrainTimeSeconds 345600 -trainPath $DATA_RND_PATH/train_09.ptb -devPath $DATA_RND_PATH/dev_09.ptb -train -model $PATH_KAGGLE_ROOT/stanford_run/rntn_flat_20141009_b.ser.gz > $PATH_KAGGLE_ROOT/stanford_run/rntn_flat_20141009_b.log 2>&1 &
+    java -mx12g -cp "$PATH_KAGGLE_ROOT/stanford_classpath3_4/*:$PATH_KAGGLE_ROOT/java_bin/" edu.stanford.nlp.sentiment.SentimentTraining -numHid 25 -batchSize 40 -debugOutputEpochs 1 -maxTrainTimeSeconds 345600 -trainPath $DATA_RND_PATH/train_09.ptb -devPath $DATA_RND_PATH/dev_09.ptb -train -model $PATH_KAGGLE_ROOT/stanford_run/rntn_flat_20141010_a.ser.gz > $PATH_KAGGLE_ROOT/stanford_run/rntn_flat_20141010_a.log 2>&1 &
 
 ########################################################################################################################
 # PRE - Test
