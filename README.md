@@ -21,12 +21,22 @@ Given a dataset of phrases (movies reviews), it is demanded to predict the label
 - 3 - somewhat positive
 - 4 - positive
 
-The given dataset has the TSV format but the toolkit of Stanford uses a PTB format as input and output.
+The given dataset is in the TSV format but the toolkit of Stanford uses a PTB format as input and output. The major part of the code
+was written to only handle the transformation between these two file types. The main difference between them is that the PTB format
+compiles the whole sentence in only one line while the TSV format uses a "Sentence's Identification Code" system.
 
-The major part of the code was written to only handle the transformation between these two file types.
+During the training phase we tried different setups (using tensor, not using it, more phrases for each batch, less phrases, different
+sizes of word vector)  once it was the our first time working with this toolkit.
 
-The main difference between them is that the PTB format compiles the whole sentence in only one line while the TSV format uses a
-"Sentence's Identification Code" system.
+We decided for it because it was written regarding the Socher's paper, a implementation of RNTNs, and during the first trainings it
+showed good numbers. Beside the fact it was a good reason to study and understand better the use of neural networks.
+
+After some tries, we realize:
+
+- the result with the entire dataset and the default implementation is better when we don't use the tensor;
+- to achieve better results it will be necessary tune the default implementation and not only the training parameter setup.
+
+The best score achieved is 0.62863 (the 124th position in the Kaggle's Leaderboard in Oct, 21st 2014)
 
 
 The Initial Setup
