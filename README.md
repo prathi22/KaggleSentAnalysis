@@ -15,11 +15,11 @@ General Description
 
 Given a dataset of phrases (movies reviews), it is demanded to predict the label for the sentiment with 5 different possible values:
 
-0 - negative
-1 - somewhat negative
-2 - neutral
-3 - somewhat positive
-4 - positive
+- 0 - negative
+- 1 - somewhat negative
+- 2 - neutral
+- 3 - somewhat positive
+- 4 - positive
 
 The given dataset has the TSV format but the toolkit of Stanford uses a PTB format as input and output.
 
