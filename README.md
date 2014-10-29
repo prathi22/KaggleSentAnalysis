@@ -13,7 +13,7 @@ and Recursive Neural Tensor Network.
 General Description
 -----------------
 
-Given a dataset of phrases (movie reviews), it is demanded to predict the label for the sentiment with 5 different possible values:
+Given a dataset of phrases (movies reviews), it is demanded to predict the label for the sentiment with 5 different possible values:
 
 0 - negative
 1 - somewhat negative
@@ -21,10 +21,13 @@ Given a dataset of phrases (movie reviews), it is demanded to predict the label 
 3 - somewhat positive
 4 - positive
 
-The given dataset has the TSV format and the toolkit uses a PTB format as input and output.
+The given dataset has the TSV format but the toolkit of Stanford uses a PTB format as input and output.
 
-The major part of the code written is to manipulate the transformation between these two file types. The main difference between them
-is that the PTB format compiles the whole sentence in only one line while the CSV format uses a "Sentence Id Code" system.
+The major part of the code was written to only handle the transformation between these two file types.
+
+The main difference between them is that the PTB format compiles the whole sentence in only one line while the TSV format uses a
+"Sentence's Identification Code" system.
+
 
 The Initial Setup
 -------------
@@ -34,8 +37,8 @@ After download the code you have to:
 - download the [`Stanford NLP - Version 3.4.1`](http://nlp.stanford.edu/software/stanford-corenlp-full-2014-08-27.zip);
 - unzip it;
 - copy the jar files (ejml-0.23, javax.json, joda-time, jollyday, stanford-corenlp-3.4.1-models, stanford-corenlp-3.4.1, xom) to
-the project folder named "stanford_classpath3_4".
-- compile the java code in the project folder named "java_bin"
+a project folder named "stanford_classpath3_4".
+- compile the java code in a project folder named "java_bin"
 
 
 How to use it
